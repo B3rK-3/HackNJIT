@@ -6,7 +6,7 @@ const app = new Hono();
 
 // CORS Headers Helper
 const addCORSHeaders = (response) => {
-	response.headers.set("Access-Control-Allow-Origin", "https://tail-of-time.josbuz211.workers.dev");
+	response.headers.set("Access-Control-Allow-Origin", "https://www.tailoftime.tech");
 	response.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
 	response.headers.set("Access-Control-Allow-Headers", "Content-Type");
 	response.headers.set("Access-Control-Allow-Credentials", "true"); // Allow credentials (cookies) in requests

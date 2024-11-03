@@ -40,6 +40,7 @@ header {
     width: 25px;
     border-top-left-radius: 25px;
     box-shadow: 0 -25px 0 0 var(--header-clr);
+    z-index: 5;
 }
 
 .header::after {
@@ -52,6 +53,7 @@ header {
     width: 25px;
     border-top-right-radius: 25px;
     box-shadow: 0 -25px 0 0 var(--header-clr);
+    z-index: 5;
 }
 
 .action {
@@ -62,6 +64,7 @@ header {
     padding: 0;
     width: 100%;
     top: 240px;
+    z-index: 10;
 }
 
 .talk {
