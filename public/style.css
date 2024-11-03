@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Timepiece;
+    src: url('./fonts/timepiece.ttf');
+}
+
+:root {
+    --header-clr: #9f8170;
+    --bg-clr: #c3b091;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-clr);
+}
+
+header {
+    position: fixed;
+    background-color: var(--header-clr);
+    min-width: 100%;
+    z-index: 10;
+}
+
+.title {
+    display: flex;
+    font-family: Timepiece;
+    font-size: 50px;
+    justify-content: center;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    background-color: var(--bg-clr);
+    bottom: -50px;
+    height: 50px;
+    width: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0 var(--header-clr);
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: var(--bg-clr);
+    bottom: -50px;
+    height: 50px;
+    width: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -25px 0 0 var(--header-clr);
+}
+
+.action {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    top: 240px;
+}
+
+.talk {
+    background-color: white;
+    width: 40vw;
+    min-width: 400px;
+    min-height: 200px;
+    border-radius: 20px;
+    font-family: Timepiece;
+    padding-bottom: 5px;
+}
+
+.date-center {
+    display: flex;
+    justify-content: center;
+}
+.date {
+    font-size: 25px;
+}
+
+.date::before {
+    content: "date: ";
+}
+
+.char-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 46px;
+}
+
+.char {
+    z-index: 10;
+    height: 210px;
+}
+
+.bot::before {
+    content: "narrator: ";
+}
+
+.user::before {
+    content: "player: ";
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.enter {
+    height: 20px;
+    cursor: pointer;
+}
+
+.response {
+    padding-left: 2px;
+    outline-width: 0.1px;
+    outline-color: gray;
+}
+
+.convo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 0 10px 0px 10px;
+}
+
+.bot {
+    color: gray;
+    white-space: pre-line;
+}
+
+.reset {
+    position: absolute;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: red;
+    margin: 10px 0 0 10px;
+}
