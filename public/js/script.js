@@ -112,15 +112,16 @@ async function randomDate(start = new Date(1820, 1, 1), end = new Date(1900, 1, 
     newBotField.innerHTML = botResponse;
     return newDate;
 }
-
+const convo = document.querySelector('.convo');
+const oldConvo = document.querySelector('.old-convo');
 randomDate();
 resetter.addEventListener('click', async (c) => {
+    const newBotField = convo.querySelector('.bot');
+    newBotField.innerHTML = '';
+    oldConvo.innerHTML = '';
     await reset();
     randomDate();
 })
-
-const convo = document.querySelector('.convo');
-const oldConvo = document.querySelector('.old-convo');
 
 async function saveConversation() {
     // Re-select the input field after it has been replaced
