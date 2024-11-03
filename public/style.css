@@ -21,7 +21,7 @@ header {
     position: fixed;
     background-color: var(--header-clr);
     min-width: 100%;
-    z-index: 10;
+    z-index: 5;
 }
 
 .title {
@@ -64,7 +64,7 @@ header {
     padding: 0;
     width: 100%;
     top: 240px;
-    z-index: 10;
+    z-index: 6;
 }
 
 .talk {
