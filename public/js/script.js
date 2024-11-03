@@ -7,7 +7,7 @@ async function addToMemory(add) {
     }
 
     try {
-        const response = await fetch("http://localhost:8787/add-memory", {
+        const response = await fetch("https://tail-of-time.josbuz211.workers.dev/add-memory", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include", // This includes cookies in the request
@@ -37,7 +37,7 @@ async function addToMemory(add) {
 async function getBotResponse(question) {
 
     try {
-        const response = await fetch(`http://localhost:8787/chat?text=${encodeURIComponent(question)}`, {
+        const response = await fetch(`https://tail-of-time.josbuz211.workers.dev/chat?text=${encodeURIComponent(question)}`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -58,7 +58,7 @@ async function getBotResponse(question) {
 //reset memory Q
 async function reset() {
     try {
-        const response = await fetch(`http://localhost:8787/clear-memory`, {
+        const response = await fetch(`https://tail-of-time.josbuz211.workers.dev/clear-memory`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -79,7 +79,7 @@ async function reset() {
 //get date
 async function getDate() {
     try {
-        const response = await fetch(`http://localhost:8787/date`, {
+        const response = await fetch(`https://tail-of-time.josbuz211.workers.dev/date`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }

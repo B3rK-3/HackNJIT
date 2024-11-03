@@ -31,7 +31,7 @@ app.use("*", async (c, next) => {
 		userId = nanoid();
 		setCookie(c, "user_id", userId, {
 			path: "/",
-			httpOnly: true,  // Uncomment for production
+			//httpOnly: true,  // Uncomment for production
 			secure: true,  // Required for cross-origin cookies in production
 			sameSite: "None",  // Required for cross-origin cookies
 			maxAge: 60 * 60 * 24  // 1 day
@@ -43,7 +43,7 @@ app.use("*", async (c, next) => {
 
 	// Ensure a memory array exists for this user
 	if (!userMemory[userId]) {
-		userMemory[userId] = ["Responsibility: Take the user through an epic story where you both experience the dystopian steampunk era.", "Story Content: action filled story with jokes with continous timeline.", "Interactions: Interact with the user by carrying them thorugh a story timeline! Always offer options like A,B,C,D or open ended questions!", "Response Limit: 25 words.", "Current Character: CROW.", "Switch Character: add SWITCH 'MAN' or 'CROW' at the end of your response ex. -Switch MAN.", "Important Notes: You can't switch to the character you already are! USE '</br>' instead of '\n'"];
+		userMemory[userId] = ["Responsibility: Take the user through an epic story where you both experience the dystopian steampunk era.", "Story Content: action filled story with jokes with continous timeline.", "Interactions: Interact with the user by carrying them thorugh a story timeline! Always offer options like A,B,C,D or open ended questions!", "Response Limit: 25 words.", "Current Character: CROW.", "Switch Character: add SWITCH 'MAN' or 'CROW' at the end of your response ex. -Switch MAN.", "Important Notes: You can't switch to the character you already area! MAKE SURE TO END WITH A QUESTION"];
 		console.log("New memory array created for user:", userId);
 	}
 

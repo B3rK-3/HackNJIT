@@ -1,8 +1,9 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "rag-ai-tutorial"
+name = "tail-of-time"
 main = "src/index.js"
 compatibility_date = "2024-10-22"
 compatibility_flags = ["nodejs_compat"]
+account_id = "e10fe2c0a399b06f15bfbf8f70d1b4bd"
 
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
@@ -121,8 +122,3 @@ binding = "AI"
 binding = "VECTOR_INDEX"
 index_name = "vector-index"
 # ... existing wrangler configuration
-
-[[d1_databases]]
-binding = "DB" # available in your Worker on env.DB
-database_name = "database"
-database_id = "abc-def-geh" # replace this with a real database_id (UUID)
